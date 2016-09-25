@@ -4,7 +4,6 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ORM.EF.Entities
 {
-  [Table("Region")]
   public partial class Region
   {
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage",

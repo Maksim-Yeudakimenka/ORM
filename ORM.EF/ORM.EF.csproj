@@ -68,6 +68,10 @@
     <Compile Include="Migrations\201609251936073_Version_1.1.Designer.cs">
       <DependentUpon>201609251936073_Version_1.1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201609251958475_Version_1.3.cs" />
+    <Compile Include="Migrations\201609251958475_Version_1.3.Designer.cs">
+      <DependentUpon>201609251958475_Version_1.3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entities\Region.cs" />
@@ -81,6 +85,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201609251936073_Version_1.1.resx">
       <DependentUpon>201609251936073_Version_1.1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609251958475_Version_1.3.resx">
+      <DependentUpon>201609251958475_Version_1.3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
