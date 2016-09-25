@@ -11,6 +11,7 @@ namespace ORM.EF.Entities
       "CA2214:DoNotCallOverridableMethodsInConstructors")]
     public Employee()
     {
+      CreditCards = new HashSet<CreditCard>();
       Employees1 = new HashSet<Employee>();
       Orders = new HashSet<Order>();
       Territories = new HashSet<Territory>();
@@ -67,6 +68,9 @@ namespace ORM.EF.Entities
 
     [StringLength(255)]
     public string PhotoPath { get; set; }
+
+    [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+    public virtual ICollection<CreditCard> CreditCards { get; set; }
 
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
     public virtual ICollection<Employee> Employees1 { get; set; }

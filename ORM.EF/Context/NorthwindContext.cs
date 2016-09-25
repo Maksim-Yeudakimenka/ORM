@@ -11,6 +11,7 @@ namespace ORM.EF.Context
     }
 
     public virtual DbSet<Category> Categories { get; set; }
+    public virtual DbSet<CreditCard> CreditCards { get; set; }
     public virtual DbSet<CustomerDemographic> CustomerDemographics { get; set; }
     public virtual DbSet<Customer> Customers { get; set; }
     public virtual DbSet<Employee> Employees { get; set; }
@@ -36,6 +37,11 @@ namespace ORM.EF.Context
       modelBuilder.Entity<Customer>()
         .Property(e => e.CustomerID)
         .IsFixedLength();
+
+      modelBuilder.Entity<Employee>()
+        .HasMany(e => e.CreditCards)
+        .WithRequired(e => e.Employee)
+        .WillCascadeOnDelete(false);
 
       modelBuilder.Entity<Employee>()
         .HasMany(e => e.Employees1)
